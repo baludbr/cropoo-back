@@ -1,0 +1,32 @@
+const mongoose = require('mongoose');
+const orderproduct = new mongoose.Schema({
+sellername:{
+    type:String,
+    required:true
+},
+selleraddress:{
+    type:String,
+    required:true
+},
+mail:{
+    type:String,
+    required:true
+},
+phonenum:{
+    type:String,
+    required:true
+},
+productid:{
+    type:String,
+    required:true
+},
+reqquantity:{
+    type:String,
+    required:true
+},
+date:{
+    type:Date,
+    default:Date.now
+}
+})
+module.exports=mongoose.model('OrderProducts',orderproduct)
